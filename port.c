@@ -416,7 +416,7 @@ static int follow_up_info_append(struct ptp_message *m)
 	fui->type = TLV_ORGANIZATION_EXTENSION;
 	fui->length = sizeof(*fui) - sizeof(fui->type) - sizeof(fui->length);
 	memcpy(fui->id, ieee8021_id, sizeof(ieee8021_id));
-	fui->subtype[2] = 1;
+	fui->subtype[2] = 2;
 
 	return 0;
 }
